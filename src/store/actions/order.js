@@ -1,12 +1,10 @@
 import * as actionTypes from './actionTypes';
-import axios from '../../axios-orders';
 import {FETCH_ORDERS_START} from './actionTypes';
 import {FETCH_ORDERS_SUCCESS} from './actionTypes';
 import {FETCH_ORDERS_FAIL} from './actionTypes';
 import {DELETE_ORDER_START} from './actionTypes';
 import {DELETE_ORDER_SUCCESS} from './actionTypes';
 import {DELETE_ORDER_FAIL} from './actionTypes';
-import qs from 'query-string';
 import {PURCHASE_BURGER} from './actionTypes';
 import {FETCH_ORDERS} from './actionTypes';
 import {DELETE_ORDER} from './actionTypes';

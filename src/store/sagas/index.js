@@ -8,7 +8,7 @@ import * as actionTypes from '../actions/actionTypes';
 import {takeEvery, all} from 'redux-saga/effects';
 import {initIngredientsSaga} from './burgerBuilder';
 import {INIT_INGREDIENTS} from '../actions/actionTypes';
-import {purchaseBurgerSaga, fetchOrders, deleteOrderSaga, fetchOrdersSaga} from './order';
+import {purchaseBurgerSaga, deleteOrderSaga, fetchOrdersSaga} from './order';
 import {PURCHASE_BURGER} from '../actions/actionTypes';
 import {FETCH_ORDERS} from '../actions/actionTypes';
 import {DELETE_ORDER} from '../actions/actionTypes';
