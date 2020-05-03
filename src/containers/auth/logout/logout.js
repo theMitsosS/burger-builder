@@ -4,19 +4,19 @@ import {logout} from '../../../store/actions/auth';
 import {Redirect} from 'react-router';
 
 class Logout extends Component {
-	componentDidMount() {
-		this.props.onLogout();
-	}
+  componentDidMount() {
+    this.props.onLogout();
+  }
 
-	render() {
-		return (<Redirect to='/'/>);
-	}
+  render() {
+    return (<Redirect to='/'/>);
+  }
 }
 
 const mapDispatchToProps=(dispatch)=>{
-	return {
-		onLogout: ()=>dispatch(logout()),
-	};
+  return {
+    onLogout: ()=>dispatch(logout()),
+  };
 };
 
 export default connect(null, mapDispatchToProps)(Logout);

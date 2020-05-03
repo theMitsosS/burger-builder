@@ -6,16 +6,16 @@ import BuildControls from '../../components/Burger/BuildControls/BuildControls';
 
 configure({adapter: new Adapter()});
 describe('<BurgerBuilder', ()=>{
-	let wrapper;
-	beforeEach(()=>{
-		wrapper=shallow(<BurgerBuilder onInitIngredients={()=>{}}/>);
-	});
+  let wrapper;
+  beforeEach(()=>{
+    wrapper=shallow(<BurgerBuilder onInitIngredients={()=>{}}/>);
+  });
 
-	it('should  display buildControls when ingredients are set', ()=> {
-		wrapper.setProps({ingredients: {
-			salad: 0,
-		}});
-		expect(wrapper.find(BuildControls)).toHaveLength(1);
-	});
+  it('should  display buildControls when ingredients are set', ()=> {
+    wrapper.setProps({ingredients: {
+      salad: 0,
+    }});
+    expect(wrapper.find(BuildControls)).toHaveLength(1);
+  });
 });
 
