@@ -1,0 +1,17 @@
+# Default ignored files
+/workspace.xml
+.idea
+*.iml
+.DS_STORE
+node_modules
+node_modules/
+build
+.DS_Store
+*.tgz
+my-app*
+template/src/__tests__/__snapshots__/
+lerna-debug.log
+npm-debug.log*
+/.changelog
+.npm/
+yarn.lock
