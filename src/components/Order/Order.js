@@ -3,7 +3,7 @@ import classes from './Order.module.css';
 
 const order = (props) => {
   const ingredients = Object.entries(props.ingredients).map((ingredient) => {
-    const ingredientName = `${ingredient[0]} + ' ' + '(' + ${ingredient[1]} + ')`;
+    const ingredientName = `${ingredient[0]} (${ingredient[1]})`;
     return (
       <span
         key={ingredient[0]}
