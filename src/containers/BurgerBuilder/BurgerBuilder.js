@@ -19,7 +19,6 @@ export class BurgerBuilder extends Component {
 
 	componentDidMount() {
 		this.props.onInitIngredients();
-
 	}
 
 	updatePurchaseState(ingredients) {
@@ -42,7 +41,7 @@ export class BurgerBuilder extends Component {
 	};
 
 	purchaseContinueHandler = () => {
-		this.setState({ loading: false, purchasing: false });
+		this.setState({ purchasing: false });
 		this.props.history.push({ pathname: "/checkout" });
 		this.props.onInitPurchase();
 
