@@ -7,7 +7,6 @@ import Logout from './containers/auth/logout/logout';
 import {authCheckState} from './store/actions/index';
 import {connect} from 'react-redux';
 import Spinner from './components/UI/spinner/spinner'
-import CheckoutSummary from "./components/Order/CheckoutSummary/CheckoutSummary";
 
 const Checkout= React.lazy(()=>{
 	return import('./containers/Checkout/Checkout');
@@ -23,7 +22,7 @@ const Auth= React.lazy(()=>{
 const App = props => {
   useEffect(()=>{
     props.onAppLoad();
-  },[]);
+  },[props]);
 
   let routes = (
     <Switch>

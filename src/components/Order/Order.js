@@ -3,6 +3,7 @@ import classes from './Order.module.css';
 
 const order = (props) => {
   const ingredients = Object.entries(props.ingredients).map((ingredient) => {
+    const ingredientName = `${ingredient[0]} + ' ' + '(' + ${ingredient[1]} + ')`;
     return (
       <span
         key={ingredient[0]}
@@ -13,7 +14,8 @@ const order = (props) => {
           border: '1px solid #ccc',
           padding: '5px',
         }}
-      >{ingredient[0] + ' ' + '(' + ingredient[1] + ')'}
+      >
+        {ingredientName}
       </span>
     );
   });
@@ -22,7 +24,7 @@ const order = (props) => {
     <div className={classes.Order}>
       <p>Ingredients: {ingredients}</p>
       <p>
-				Price: <strong>USD {props.price} </strong>
+        Price: <strong>USD {props.price} </strong>
       </p>
       <button onClick={props.delete}>delete</button>
     </div>
