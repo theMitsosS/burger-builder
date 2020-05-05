@@ -7,9 +7,10 @@ import Spinner from '../../components/UI/spinner/spinner';
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 
 const Orders =(props)=> {
+  const {onFetchOrders, token, userId}=props;
   useEffect(()=>{
-	  props.onFetchOrders(props.token, props.userId);
-  }, []);
+	  onFetchOrders(token, userId);
+  }, [onFetchOrders, token, userId]);
 
   const orders = !props.loading ? (
 			props.orders.map((order) => {

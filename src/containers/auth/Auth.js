@@ -41,11 +41,12 @@ const Auth =(props)=> {
     },
   });
   const [isSignUp, setIsSignUp]=useState(false);
+  const {onAuthRedirect, building}=props;
   useEffect(()=>{
-    if (!props.building) {
-      props.onAuthRedirect('/');
+    if (!building) {
+      onAuthRedirect('/');
     }
-  }, []);
+  }, [onAuthRedirect, building]);
 
   const inputChangedHandler = (event, controlName) => {
     const updatedControls=updateObject(controls, {
